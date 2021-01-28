@@ -1,10 +1,12 @@
+- Docker run Sysrepo
 ```docker run --network host --name yang-explore -it yang-explore:2 bash
 docker run -it --name sysrepo -p 830:830 sysrepo/sysrepo-netopeer2:latest
 ```
-- Copy file to sysrepo
+- Copy file to sysrepo container
 
 for i in $(ls yang_files); do  sudo docker cp yang_files/$i  sysrepo:/tmp;  done
 
+- Import yang file to sysrepo
 ```docker exec sysrepo sysrepoctl -i /tmp/ieee802-dot1q-types.yang
 
 docker exec sysrepo sysrepoctl -i /tmp/ietf-yang-types@2010-09-24.yang
@@ -25,6 +27,7 @@ docker exec sysrepo sysrepoctl -i /tmp/ieee802-dot1q-bridge.yang
 NACM problem:
 https://github.com/CESNET/netopeer2/issues/658
 
+- Need to Add config-acm.xml to avoid this problems.
 - config-acm.xml:
 ```
 <nacm xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-acm">
@@ -32,4 +35,5 @@ https://github.com/CESNET/netopeer2/issues/658
 </nacm>
 ```
 
+- Import acm xml 
 sysrepocfg --import=config-acm.xml --datastore startup --module ietf-netconf-acm
