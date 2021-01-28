@@ -36,4 +36,6 @@ https://github.com/CESNET/netopeer2/issues/658
 ```
 
 - Import acm xml 
+```
 sysrepocfg --import=config-acm.xml --datastore startup --module ietf-netconf-acm
+```
