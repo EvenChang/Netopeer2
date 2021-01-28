@@ -26,8 +26,10 @@ NACM problem:
 https://github.com/CESNET/netopeer2/issues/658
 
 - config-acm.xml:
-```<nacm xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-acm">
+```
+<nacm xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-acm">
      <enable-nacm>false</enable-nacm>
-</nacm>```
+</nacm>
+```
 
 sysrepocfg --import=config-acm.xml --datastore startup --module ietf-netconf-acm
