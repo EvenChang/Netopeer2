@@ -1,7 +1,9 @@
 ```docker run --network host --name yang-explore -it yang-explore:2 bash
-```docker run -it --name sysrepo -p 830:830 sysrepo/sysrepo-netopeer2:latest
+docker run -it --name sysrepo -p 830:830 sysrepo/sysrepo-netopeer2:latest
+```
+- Copy file to sysrepo
 
-```for i in $(ls yang_files); do  sudo docker cp yang_files/$i  sysrepo:/tmp;  done
+for i in $(ls yang_files); do  sudo docker cp yang_files/$i  sysrepo:/tmp;  done
 
 ```docker exec sysrepo sysrepoctl -i /tmp/ieee802-dot1q-types.yang
 
