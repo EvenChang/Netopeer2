@@ -1,0 +1,19 @@
+      <lldp xmlns="urn:ieee:std:802.1AB:yang:ieee802-dot1ab-lldp">
+        <port>
+          <name>eno2</name>
+          <dest-mac-address>30-60-60-32-86-30</dest-mac-address>
+          <remote-systems-data>
+            <time-mark>0</time-mark>
+            <remote-index>1</remote-index>
+            <chassis-id-subtype>interface-alias</chassis-id-subtype>
+            <chassis-id>test1</chassis-id>
+            <port-id-subtype>port-component</port-id-subtype>
+            <port-id>12345678</port-id>
+            <port-desc/>
+            <system-name/>
+            <system-description/>
+            <system-capabilities-supported>bridge wlan-access-point station-only telephone</system-capabilities-supported>
+            <system-capabilities-enabled>bridge other telephone</system-capabilities-enabled>
+          </remote-systems-data>
+        </port>
+      </lldp>
