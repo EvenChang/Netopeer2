@@ -1,0 +1,24 @@
+<interfaces xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces"
+	xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+        <interface>
+                <name>eno0</name>
+		<type xmlns:ianaift="urn:ietf:params:xml:ns:yang:iana-if-type">ianaift:ethernetCsmacd</type>
+		<statistics>
+			<discontinuity-time>2015-05-19T16:39:57-08:00</discontinuity-time>
+			<in-octets>10</in-octets>
+			<in-unicast-pkts>20</in-unicast-pkts>
+			<in-broadcast-pkts>30</in-broadcast-pkts>
+			<in-multicast-pkts>40</in-multicast-pkts>
+			<in-discards>50</in-discards>
+			<in-errors>60</in-errors>
+			<in-unknown-protos>70</in-unknown-protos>
+			<out-octets>80</out-octets>
+			<out-unicast-pkts>90</out-unicast-pkts>
+			<out-broadcast-pkts>100</out-broadcast-pkts>
+			<out-multicast-pkts>110</out-multicast-pkts>
+			<out-discards>120</out-discards>
+			<out-errors>130</out-errors>
+
+		</statistics>	
+        </interface>
+</interfaces>
