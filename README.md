@@ -9,7 +9,7 @@ docker run -it --name sysrepo -p 830:830 sysrepo/sysrepo-netopeer2:latest
 docker exec sysrepo git clone https://github.com/EvenChang/Netopeer2.git
 
 - Import yang file to sysrepo
-```docker exec sysrepo sysrepoctl -i /root/Netopeer2/ieee802-dot1q-types.yang
+```docker exec sysrepo sysrepoctl -i /root/Netopeer2/tsn-modules/ieee802-dot1q-types.yang
 
 docker exec sysrepo sysrepoctl -i /root/Netopeer2/tsn-modules/ietf-yang-types@2010-09-24.yang
 
