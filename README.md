@@ -24,6 +24,22 @@ docker exec sysrepo sysrepoctl -i /root/Netopeer2/tsn-modules/iana-if-type@2014-
 docker restart sysrepo
 
 docker exec sysrepo sysrepoctl -i /root/Netopeer2/tsn-modules/ieee802-dot1q-bridge.yang
+
+docker exec sysrepo sysrepoctl -i /root/Netopeer2/tsn-modules/ietf-ip@2014-06-16.yang
+
+docker exec sysrepo sysrepoctl -i /root/Netopeer2/tsn-modules/ieee802-dot1ab-types.yang
+
+docker exec sysrepo sysrepoctl -i /root/Netopeer2/tsn-modules/ietf-routing@2018-03-13.yang
+
+docker exec sysrepo sysrepoctl -i /root/Netopeer2/tsn-modules/ietf-ip@2014-06-16.yang
+
+docker restart sysrepo
+
+docker exec sysrepo sysrepoctl -i /root/Netopeer2/tsn-modules/ieee802-dot1ab-lldp.yang
+
+docker restart sysrepo
+
+
 ```
 
 NACM problem:
