@@ -4,8 +4,6 @@ docker run -it --name sysrepo -p 830:830 sysrepo/sysrepo-netopeer2:latest
 ```
 - Copy file to sysrepo container
 
-#for i in $(ls yang_files); do  sudo docker cp yang_files/$i  sysrepo:/tmp;  done
-
 docker exec sysrepo git clone https://github.com/EvenChang/Netopeer2.git
 
 - Import yang file to sysrepo
@@ -37,8 +35,17 @@ docker restart sysrepo
 
 docker exec sysrepo sysrepoctl -i /root/Netopeer2/tsn-modules/ieee802-dot1ab-lldp.yang
 
+docker exec sysrepo sysrepoctl -i /root/Netopeer2/tsn-modules/ietf-hardware@2018-03-13.yang
+
 docker restart sysrepo
 
+
+
+
+- Import acm xml 
+```
+docker exec sysrepo sysrepocfg --import=config-acm.xml --datastore startup --module ietf-netconf-acm
+```
 
 ```
 
@@ -51,9 +58,4 @@ https://github.com/CESNET/netopeer2/issues/658
 <nacm xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-acm">
      <enable-nacm>false</enable-nacm>
 </nacm>
-```
-
-- Import acm xml 
-```
-docker exec sysrepo sysrepocfg --import=config-acm.xml --datastore startup --module ietf-netconf-acm
 ```
