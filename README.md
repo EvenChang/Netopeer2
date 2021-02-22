@@ -47,7 +47,7 @@ docker restart sysrepo
 docker exec sysrepo sysrepocfg --import=config-acm.xml --datastore startup --module ietf-netconf-acm
 ```
 
-```
+
 
 NACM problem:
 https://github.com/CESNET/netopeer2/issues/658
