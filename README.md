@@ -38,7 +38,7 @@ docker exec sysrepo sysrepoctl -i /root/Netopeer2/tsn-modules/ieee802-dot1ab-lld
 docker exec sysrepo sysrepoctl -i /root/Netopeer2/tsn-modules/ietf-hardware@2018-03-13.yang
 
 docker restart sysrepo
-
+'''
 
 
 
